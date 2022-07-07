@@ -10,6 +10,9 @@ import {useStateContext} from "../context/StateContext";
 const Cart = () => {
     const cartRef = useRef(null)
     const {totalPrice, totalQty, cartItems, setShowCart, toggleCartItemQty,onRemove} = useStateContext()
+    
+
+    
 
     return (
         <div className='cart-wrapper' ref={cartRef}>
@@ -64,9 +67,11 @@ const Cart = () => {
                             <h3>{totalPrice}UAH</h3>
                         </div>
                         <div className='btn-container'>
-                            <button type='button' className='btn' onClick=''>
-                                Click to pay
-                            </button>
+                            <Link href='/success'>
+                                <button type='button' className='btn' onClick={() => setShowCart(false)}>
+                                    Click to pay
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 )}

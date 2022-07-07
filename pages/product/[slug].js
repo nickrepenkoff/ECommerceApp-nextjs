@@ -61,7 +61,7 @@ const ProductDetails = ({product, products}) => {
                         <button
                             type='button'
                             className='buy-now'
-                            onClick=''>
+                        >
                             Buy now
                         </button>
                     </div>
